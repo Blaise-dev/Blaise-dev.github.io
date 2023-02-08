@@ -1,7 +1,4 @@
 ﻿<!doctype html>
-<?php
-	session_start();
-?>
 
 <html>
 	<head>
@@ -17,26 +14,28 @@
 	<body>
 		<div class = "container-fluid" >
 
-		<?php require_once('./include/header.php'); ?>
+			<header style="margin-bottom: 60px;" class = "row">
+				<div class = "col-lg-12" >
+					<a style = "color: white; text-decoration: none; font-size: 35px; font-family: serif;" href = "index.php" title = "Retourner à l'accueil">Accueil</a>
+
+					<!--<a href="signout.php">Se déconnecter</a>-->
+
+				</div>
+			</header>
 
 			<div class = "row">
-				<?php
-					if(isset($_SESSION['login'])) {
-				?>
+
 			
 				<nav class = "menu_nav col-lg-2">
 					<ul class="nav navbar-nav">
 						<li class="active"><a class = "aDecor" href="bergerie.html">Bergerie</a></li>
 						<li><a class = "aDecor" href="porcherie.html">Porcherie</a></li>
 						<li><a class = "aDecor" href="poulailler.html">Poulailler</a></li>
-						<li><a href="signout.php">Se déconnecter</a></li>
 
 								</ul>
 							</nav>
 							
-							<?php
-								}
-							?>
+
 				<section class = "col-lg-10">
 					<p class = "col-lg-12" ><h1 style = " text-align: center;">Bienvenue sur M@<span style = "color: red;">Ferme</span></h1></p>
 					<p class = "col-lg-12" style = "font-style: italic; font-size: 14px; margin-left: 40px; color: rgba(10, 10, 10, 0.3); text-align: center;">Le site de la Bio diversité animale.</p>
@@ -72,7 +71,11 @@
 				</section>
 			</div>
 
-		<?php require_once('./include/footer.php'); ?>
+			<footer class = "row" style = "text-align: center; margin-top: 400px; height: 250px;">
+				<div class = "col-lg-12" style = "text-align: center; position: relative; top: 150px; color: white;" >
+					<a href = "mailto:Groupe22@gmail.com" >Nous contacter</a> | Copyright 2021
+				</div>
+			</footer>
 
 		</div>
 	</body>
